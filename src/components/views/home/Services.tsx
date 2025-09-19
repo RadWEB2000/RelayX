@@ -4,7 +4,7 @@ export default function Services() {
             className="my-60 change-background px-[7vw] py-20"
         >
             <p className="lead">
-                Co mogę Tobie zaoferować?
+                Co mogę Tobie<br /> zaoferować?
             </p>
             <h2
                 className="font-big-uppercase text-9xl "

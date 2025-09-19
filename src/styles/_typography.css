@@ -1,30 +1,23 @@
 @import "tailwindcss";
+@import "./global.css";
 
-@utility lead {
-
-    @apply font-regular bg-neutral-50;
-    display: inline-flex;
-    line-height: 1;
-    font-size: var(--text-2xl);
-    font-family: var(--font-slab);
-    font-weight: 700;
-    text-transform: uppercase;
+.lead {
+    @apply font-regular bg-neutral-50 leading-[1.8] font-semibold text-2xl uppercase inline;
+    /* white-space: nowrap; */
 }
-
-/* .lead {
-} */
 
 .lead::after {
     content: ']';
-    margin-left: 10px;
+    margin-left: 0.2em;
 }
 
 .lead::before {
     content: '[';
-    margin-right: 10px;
+    margin-right: 0.2em;
 }
 
 .lead::after,
 .lead::before {
-    font-size: var(--text-2xl);
+    @apply text-2xl font-slab font-thin leading-[1.8];
+    /* font-size: var(--text-2xl); */
 }
