@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-big: var(--font-big);
+  --font-big-uppercase: var(--font-big-uppercase);
+  --font-slab: var(--font-slab);
+  --font-regular: ui-sans-serif,
+    system-ui,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+}
+
+
+
+body {
+  @apply font-regular bg-neutral-50;
+}

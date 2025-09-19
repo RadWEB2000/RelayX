@@ -1,0 +1,31 @@
+@keyframes bg-fade-in {
+    from {
+        background-color: var(--color-neutral-50);
+    }
+
+    to {
+        background-color: var(--color-orange-100);
+    }
+}
+
+@keyframes bg-fade-out {
+    from {
+        background-color: var(--color-orange-100);
+    }
+
+    to {
+        background-color: var(--color-neutral-50);
+    }
+}
+
+.change-background {
+    animation-name: bg-fade-in, bg-fade-out;
+    animation-duration: 1ms, 1ms;
+    animation-timing-function: linear, linear;
+    animation-fill-mode: both, both;
+    animation-timeline: --vis, --vis;
+    animation-range: entry -50% exit 0%, entry 90% exit 95%;
+    background-color: var(--color-neutral-50);
+    view-timeline-axis: block;
+    view-timeline-name: --vis;
+}

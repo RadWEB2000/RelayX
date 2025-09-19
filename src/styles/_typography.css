@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@utility lead {
+
+    @apply font-regular bg-neutral-50;
+    display: inline-flex;
+    line-height: 1;
+    font-size: var(--text-2xl);
+    font-family: var(--font-slab);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* .lead {
+} */
+
+.lead::after {
+    content: ']';
+    margin-left: 10px;
+}
+
+.lead::before {
+    content: '[';
+    margin-right: 10px;
+}
+
+.lead::after,
+.lead::before {
+    font-size: var(--text-2xl);
+}

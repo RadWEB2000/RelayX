@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,39 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/fonts/*": ["./src/assets/fonts/*"],
+      "@/ico/*": ["./src/assets/icons/*"],
+      "@/img/*": ["./src/assets/images/*"],
+      "@/movies/*": ["./src/assets/movies/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/layout/*": ["./src/components/layout/*"],
+      "@/buttons/*": ["./src/components/utils/Buttons/*"],
+      "@/utils/*": ["./src/components/utils/*"],
+      "@/views/*": ["./src/components/views/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/data/*": ["./src/data/*"],
+      "@/queries/*": ["./src/data/queries/*"],
+      "@/static/*": ["./src/data/static/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/configs/*": ["./src/lib/configs/*"],
+      "@/funcs/*": ["./src/lib/functions/*"],
+      "@/hooks/*": ["./src/lib/hooks/*"],
+      "@/provider/*": ["./src/provider/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/css/*": ["./src/styles/*"],
+      "@/ts/*": ["./src/types/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

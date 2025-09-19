@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Anton, Anton_SC, Roboto_Mono } from "next/font/google";
+import "@/css/global.css";
+import "@/css/_typography.css";
+import "@/css/_utils.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const anton = Anton({
+  subsets: ["latin-ext"],
+  weight: ['400'],
+  variable: '--font-big'
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const antonSc = Anton_SC({
+  subsets: ["latin-ext"],
+  weight: ['400'],
+  variable: '--font-big-uppercase'
+})
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin-ext"],
+  weight: ['400', '500', '700'],
+  variable: '--font-slab'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,12 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl_PL">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${anton.variable} ${antonSc.variable} ${robotoMono.variable} antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
+
