@@ -1,0 +1,53 @@
+<header
+    class="grid grid-cols-1 grid-rows-1 relative overflow-hidden z-[0]"
+    id="hero-wrapper"
+>
+    <section
+        class="col-start-1 row-start-1 p-5 xl:p-12 min-h-[91vh] bg-rose-400/0 flex flex-col justify-center space-y-2"
+    >
+        <h1 class="text-xl font-roboto">
+            Pozycjonowanie SEO | Strony interenetowe | Reklamy PPC |
+            Automatyzacje RPA
+        </h1>
+        <h2
+            class="font-black text-11xl sm:text-12xl 2xl:!text-[11em] font-big text-balance uppercase"
+        >
+            Zbuduj, zaufaj,<br /> zarób, zdobywaj!
+        </h2>
+    </section>
+    <video
+        loop
+        autoplay
+        muted
+        class="absolute col-start-1 row-start-1 z-[-1] h-full w-full object-cover brightness-60"
+    >
+        <source src="/blob.mp4" />
+    </video>
+</header>
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+    const wrapper = document.querySelector(
+        "#hero-wrapper",
+    ) as HTMLElement | null;
+    if (!wrapper) {
+    } else {
+        if (window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+            gsap.killTweensOf(wrapper);
+            wrapper.style.transform = "scale(1)";
+        } else {
+            gsap.to(wrapper, {
+                scale: 0.97,
+                borderRadius: "4.2vw",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: wrapper,
+                    start: "top top",
+                    end: "+=1000",
+                    scrub: true,
+                },
+            });
+        }
+    }
+</script>

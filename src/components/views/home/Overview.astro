@@ -1,0 +1,33 @@
+<section
+    class="text-xl sm:text-3xl xl:text-5xl font-big font-bold max-w-[70ch] w-[85%] ml-4 sm:ml-10 xl:ml-12 mr-auto my-[10vh] text-neutral-500/20 leading-[1.5] reveal"
+>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos consectetur
+    sint sunt, officiis omnis vero dicta culpa placeat sapiente tempore
+    doloribus autem pariatur quo, rerum quisquam? Dolore praesentium incidunt
+    quasi? Libero totam accusamus ratione sint? Aperiam exercitationem expedita
+    ipsa ipsum excepturi quos molestiae fugiat officia cum molestias fugit
+    officiis voluptas dolor inventore dolorem et sit saepe neque blanditiis,
+    laborum quae.
+</section>
+<style>
+    @keyframes scroll-reveal {
+        to {
+            background-size: 100% 100%;
+        }
+    }
+
+    .reveal {
+        background-clip: text;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        background-image: linear-gradient(
+            90deg,
+            var(--color-neutral-50),
+            var(--color-neutral-50)
+        );
+        animation: scroll-reveal linear forwards;
+        animation-timeline: view(y);
+        animation-range: cover 10% cover 50%;
+        transition: 12s linear background-size;
+    }
+</style>

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@layer theme, base, components, utilities;
+
+
+
+
+@theme inline {
+    --text-10xl: clamp(3rem, 2rem + 2vw, 4rem);
+    --text-11xl: clamp(4rem, 3rem + 3vw, 6rem);
+    --text-12xl: clamp(5rem, 4.2rem + 4.2vw, 9rem);
+    --font-roboto-slab: "Roboto Slab", serif;
+    --font-roboto: "Roboto", sans-serif;
+    --font-big: "Big Shoulders",
+        sans-serif;
+}
+
+@layer utilities {
+    .text-10xl {
+        font-size: var(--text-10xl);
+        line-height: 1.1;
+    }
+
+    .text-11xl {
+        font-size: var(--text-11xl);
+        line-height: 1.1;
+    }
+
+    .text-12xl {
+        font-size: var(--text-12xl);
+        line-height: 1.05;
+    }
+}
+
+
+.lead {
+    @apply text-2xl font-bold text-neutral-500 font-roboto-slab after:content-[']'] before:content-['['] after:ml-5 before:mr-5 uppercase;
+}
